@@ -1,0 +1,25 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 2,
+    "settings": {
+        "layout": {
+            "contentSize": "1040px",
+            "wideSize": "1200px"
+        },
+        "typography": {
+            "fontFamilies": []
+        },
+        "color": {
+            "palette": []
+        },
+        "spacing": {
+            "padding": true,
+            "margin": true
+        }
+    },
+    "styles": {
+        "spacing": {
+            "blockGap": "0"
+        }
+    }
+}

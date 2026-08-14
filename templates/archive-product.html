@@ -1,0 +1,72 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:html -->
+<div class="ozpd-hero">
+    <div class="ozpd-hero-copy">
+        <p class="ozpd-eyebrow">Interactive checkout demo</p>
+        <h1 class="ozpd-hero-h1">See OzuPay in action.</h1>
+        <p class="ozpd-hero-sub">Choose a KSh 1 test product and experience a complete M-Pesa checkout. It takes less than 30 seconds.</p>
+    </div>
+    <div class="ozpd-demo-note" role="note">
+        <span class="ozpd-demo-note__icon" aria-hidden="true">i</span>
+        <div><strong>Safe to explore</strong><span>Daraja sandbox &middot; no money is charged</span></div>
+    </div>
+</div>
+<!-- /wp:html -->
+
+<main>
+
+<!-- wp:html -->
+<div class="ozpd-products-label">
+    <div><p class="ozpd-eyebrow">Choose your checkout</p><h2>Pick a test product</h2></div>
+    <p class="ozpd-products-hint">Both products cost KSh 1. Select either to continue.</p>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group ozpd-products-section">
+
+    <!-- wp:woocommerce/store-notices /-->
+
+    <!-- wp:woocommerce/product-collection {"queryId":0,"query":{"perPage":12,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"menu_order","inherit":true,"taxQuery":{},"isProductCollectionBlock":true,"featured":false,"woocommerceOnSale":false,"woocommerceStockStatus":["instock"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[]},"namespace":"woocommerce/product-collection/product-catalog","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"queryContextIncludes":["collection"]} -->
+
+        <!-- wp:woocommerce/product-template -->
+
+            <!-- wp:woocommerce/product-image {"imageSizing":"thumbnail"} /-->
+
+            <!-- wp:group {"style":{"spacing":{"padding":{"top":"12px","right":"16px","bottom":"16px","left":"16px"}}},"layout":{"type":"constrained"}} -->
+            <div class="wp-block-group" style="padding:12px 16px 16px">
+                <!-- wp:post-title {"isLink":true,"level":3,"style":{"typography":{"fontSize":"15px","fontWeight":"700"},"color":{"text":"#eef2f0"},"spacing":{"margin":{"top":"0","bottom":"4px"}}}} /-->
+                <!-- wp:woocommerce/product-short-description {"style":{"spacing":{"margin":{"bottom":"8px"}}}} /-->
+                <!-- wp:group {"className":"ozpd-price-row","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+                <div class="wp-block-group ozpd-price-row">
+                    <!-- wp:woocommerce/product-price {"style":{"typography":{"fontWeight":"800","fontSize":"17px"},"color":{"text":"#eef2f0"},"spacing":{"margin":{"bottom":"0"}}}} /-->
+                    <!-- wp:woocommerce/product-button {"textAlign":"center","style":{"border":{"radius":"8px"}}} /-->
+                </div>
+                <!-- /wp:group -->
+            </div>
+            <!-- /wp:group -->
+
+        <!-- /wp:woocommerce/product-template -->
+
+    <!-- /wp:woocommerce/product-collection -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:html -->
+<div class="ozpd-cta-section">
+    <div class="ozpd-promo">
+        <div class="ozpd-promo-text">
+            <p class="ozpd-eyebrow">Built for Kenyan commerce</p>
+            <h2>Ready to accept M-Pesa?</h2>
+            <p>Add a fast, native payment experience to your WooCommerce store.</p>
+        </div>
+        <a href="https://ozupay.com/shop/" class="ozpd-promo-cta" target="_blank" rel="noopener noreferrer">Explore OzuPay Pro <span aria-hidden="true">&rarr;</span></a>
+    </div>
+</div>
+<!-- /wp:html -->
+
+</main>
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

@@ -1,0 +1,60 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<main>
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group ozpd-product-wrap">
+
+    <!-- wp:woocommerce/store-notices /-->
+    <!-- wp:woocommerce/breadcrumbs /-->
+
+    <!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"48px"},"padding":{"bottom":"48px"}}}} -->
+    <div class="wp-block-columns" style="padding-bottom:48px;gap:48px">
+
+        <!-- Left: image -->
+        <!-- wp:column {"width":"50%"} -->
+        <div class="wp-block-column" style="flex-basis:50%">
+            <!-- wp:woocommerce/product-image-gallery /-->
+        </div>
+        <!-- /wp:column -->
+
+        <!-- Right: details -->
+        <!-- wp:column {"width":"50%"} -->
+        <div class="wp-block-column" style="flex-basis:50%">
+
+            <!-- wp:post-title {"level":1,"style":{"color":{"text":"#eef2f0"},"typography":{"fontSize":"clamp(20px,2.5vw,28px)","fontWeight":"800","letterSpacing":"-0.025em"},"spacing":{"margin":{"top":"0","bottom":"10px"}}}} /-->
+
+            <!-- wp:woocommerce/product-price {"style":{"typography":{"fontWeight":"800","fontSize":"26px"},"color":{"text":"#eef2f0"},"spacing":{"margin":{"bottom":"16px"}}}} /-->
+
+            <!-- wp:woocommerce/product-summary /-->
+
+            <!-- wp:woocommerce/add-to-cart-form /-->
+
+            <!-- wp:html -->
+            <p class="ozpd-powered-by">
+                <img src="/wp-content/themes/ozupay-demo-theme/favicon.png" alt="" aria-hidden="true">
+                Checkout powered by <a href="https://ozupay.com/" target="_blank" rel="noopener noreferrer">OzuPay for WooCommerce</a>
+            </p>
+            <!-- /wp:html -->
+
+        </div>
+        <!-- /wp:column -->
+
+    </div>
+    <!-- /wp:columns -->
+
+    <!-- Buy the plugin promo card -->
+    <!-- wp:html -->
+    <div class="ozpd-promo">
+        <div class="ozpd-promo-text">
+            <h2>Want this checkout on your WooCommerce store?</h2>
+            <p>OzuPay Pro — from KES 5,000 / year. Instant licence key, auto-updates included.</p>
+        </div>
+        <a href="https://ozupay.com/shop/" class="ozpd-promo-cta" target="_blank" rel="noopener noreferrer">Get OzuPay M-Pesa Plugin Pro &rarr;</a>
+    </div>
+    <!-- /wp:html -->
+
+</div>
+<!-- /wp:group -->
+</main>
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

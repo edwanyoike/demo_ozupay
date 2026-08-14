@@ -1,0 +1,104 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<main>
+
+<!-- ── Hero ── -->
+<!-- wp:html -->
+<section class="ozpd-hero">
+
+    <h1 class="ozpd-hero-h1">Try M-Pesa checkout<br>in <span class="ozpd-hero-accent">under 30 seconds</span></h1>
+
+    <p class="ozpd-hero-sub">Pick a product, enter your Safaricom number at checkout, and approve the M-Pesa prompt on your phone.</p>
+
+    <div class="ozpd-steps-v">
+
+        <div class="ozpd-step-v">
+            <div class="ozpd-step-v-track">
+                <div class="ozpd-step-v-num ozpd-step-v-num--solid">1</div>
+                <div class="ozpd-step-v-line"></div>
+            </div>
+            <div class="ozpd-step-v-content">
+                <p class="ozpd-step-v-title">Add to cart</p>
+                <p class="ozpd-step-v-sub">Choose a test product below</p>
+            </div>
+        </div>
+
+        <div class="ozpd-step-v">
+            <div class="ozpd-step-v-track">
+                <div class="ozpd-step-v-num">2</div>
+                <div class="ozpd-step-v-line"></div>
+            </div>
+            <div class="ozpd-step-v-content">
+                <p class="ozpd-step-v-title">Enter your number</p>
+                <p class="ozpd-step-v-sub">Your Safaricom number at checkout</p>
+            </div>
+        </div>
+
+        <div class="ozpd-step-v">
+            <div class="ozpd-step-v-track">
+                <div class="ozpd-step-v-num">3</div>
+            </div>
+            <div class="ozpd-step-v-content">
+                <p class="ozpd-step-v-title">Approve on phone</p>
+                <p class="ozpd-step-v-sub">M-Pesa STK Push arrives instantly</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- /wp:html -->
+
+<!-- ── Products label ── -->
+<!-- wp:html -->
+<div class="ozpd-products-label">
+    <p>Pick a product to try</p>
+</div>
+<!-- /wp:html -->
+
+<!-- ── Product cards ── -->
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group ozpd-products-section">
+
+    <!-- wp:woocommerce/product-collection {"queryId":0,"query":{"perPage":12,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"menu_order","inherit":false,"taxQuery":{},"isProductCollectionBlock":true,"featured":false,"woocommerceOnSale":false,"woocommerceStockStatus":["instock"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[]},"namespace":"woocommerce/product-collection/product-catalog","displayLayout":{"type":"flex","columns":1,"shrinkColumns":true},"queryContextIncludes":["collection"]} -->
+
+        <!-- wp:woocommerce/product-template -->
+
+            <!-- wp:woocommerce/product-image {"imageSizing":"thumbnail"} /-->
+
+            <!-- wp:group {"style":{"spacing":{"padding":{"top":"16px","right":"16px","bottom":"18px","left":"16px"}}},"layout":{"type":"constrained"}} -->
+            <div class="wp-block-group" style="padding:16px 16px 18px">
+                <!-- wp:post-title {"isLink":true,"level":3,"style":{"typography":{"fontSize":"15px","fontWeight":"700"},"color":{"text":"#eef2f0"},"spacing":{"margin":{"top":"0","bottom":"3px"}}}} /-->
+                <!-- wp:woocommerce/product-short-description {"style":{"typography":{"fontSize":"12px"},"color":{"text":"#93a29a"},"spacing":{"margin":{"top":"0","bottom":"10px"}}}} /-->
+                <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+                <div class="wp-block-group ozpd-price-row">
+                    <!-- wp:woocommerce/product-price {"style":{"typography":{"fontWeight":"800","fontSize":"24px"},"color":{"text":"#eef2f0"},"spacing":{"margin":{"bottom":"0"}}}} /-->
+                    <!-- wp:woocommerce/product-button {"textAlign":"center","style":{"border":{"radius":"8px"}}} /-->
+                </div>
+                <!-- /wp:group -->
+            </div>
+            <!-- /wp:group -->
+
+        <!-- /wp:woocommerce/product-template -->
+
+    <!-- /wp:woocommerce/product-collection -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- ── CTA banner ── -->
+<!-- wp:html -->
+<div class="ozpd-cta-section">
+    <div class="ozpd-promo">
+        <div class="ozpd-promo-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3.5 10L8 14.5L16.5 5.5" stroke="#06140f" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h2>Like what you see?<br>Put it on your store.</h2>
+        <p><strong>OzuPay Pro</strong> &mdash; STK Push, C2B fallback, B2C refunds, analytics, auto-updates.<br>From <strong class="ozpd-promo-price">KES 5,000 / year.</strong></p>
+        <a href="https://ozupay.com/shop/" class="ozpd-promo-cta" target="_blank" rel="noopener noreferrer">Get OzuPay M-Pesa Plugin Pro &rarr;</a>
+    </div>
+</div>
+<!-- /wp:html -->
+
+</main>
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
