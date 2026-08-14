@@ -268,7 +268,7 @@ add_action( 'wp_footer', function (): void {
 	}, true);
 
 	labelButtons();
-	new MutationObserver(labelButtons).observe(document.body, { childList: true, subtree: true });
+	new MutationObserver(labelButtons).observe(document.body, { childList: true, characterData: true, subtree: true });
 }());
 </script>
 	<?php

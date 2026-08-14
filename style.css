@@ -2,7 +2,7 @@
 Theme Name:  OzuPay Demo
 Template:    twentytwentyfive
 Description: Minimal sandbox demo theme for demo.ozupay.com — products, checkout, buy-the-plugin CTAs.
-Version:     1.3.2
+Version:     1.3.3
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
@@ -289,6 +289,7 @@ main { border: 0; }
     border: 1px solid #cce7d7;
     border-radius: 14px;
 }
+body.woocommerce-checkout .woocommerce-message { display: none !important; }
 .ozpd-checkout-intro .ozpd-eyebrow { margin-bottom: 7px; }
 .ozpd-checkout-intro h1 { margin: 0; color: #10251b !important; font-size: 22px; letter-spacing: -.025em; }
 .ozpd-checkout-intro > p { max-width: 560px; margin: 0; color: #40564b !important; font-size: 13px; line-height: 1.55; }
