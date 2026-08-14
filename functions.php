@@ -236,6 +236,44 @@ add_action( 'woocommerce_checkout_create_order', function ( $order ): void {
 // Disable image zoom on product pages.
 add_filter( 'woocommerce_single_product_zoom_enabled', '__return_false' );
 
+// Product Collection blocks use a multi-request AJAX add-to-cart flow. For
+// this purpose-built demo, one click should move straight to checkout. Capture
+// the product ID already rendered by WooCommerce and let its normal server-side
+// add-to-cart handler populate the cart during the checkout navigation.
+add_action( 'wp_footer', function (): void {
+	if ( ! function_exists( 'is_shop' ) || ! is_shop() ) {
+		return;
+	}
+	?>
+<script>
+(function () {
+	function labelButtons() {
+		document.querySelectorAll('.ozpd-products-section [data-product_id]').forEach(function (button) {
+			var label = button.querySelector('span');
+			if (label && label.textContent !== 'Try checkout') label.textContent = 'Try checkout';
+			button.setAttribute('aria-label', 'Try this product in checkout');
+		});
+	}
+
+	document.addEventListener('click', function (event) {
+		var button = event.target.closest('.ozpd-products-section [data-product_id]');
+		if (!button) return;
+		var productId = button.getAttribute('data-product_id');
+		if (!productId) return;
+		event.preventDefault();
+		event.stopImmediatePropagation();
+		button.classList.add('is-loading');
+		button.textContent = 'Opening checkout\u2026';
+		window.location.assign('/checkout/?add-to-cart=' + encodeURIComponent(productId));
+	}, true);
+
+	labelButtons();
+	new MutationObserver(labelButtons).observe(document.body, { childList: true, subtree: true });
+}());
+</script>
+	<?php
+}, 5 );
+
 // ── Cart count badge — updated via WC Store API (works with Cart Block) ───────
 
 add_action( 'wp_footer', function (): void {

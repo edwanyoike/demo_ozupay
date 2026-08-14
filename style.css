@@ -2,7 +2,7 @@
 Theme Name:  OzuPay Demo
 Template:    twentytwentyfive
 Description: Minimal sandbox demo theme for demo.ozupay.com — products, checkout, buy-the-plugin CTAs.
-Version:     1.3.1
+Version:     1.3.2
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
@@ -237,6 +237,97 @@ main { border: 0; }
     .ozpd-promo-cta { display: inline-flex; margin-top: 24px; }
     .ozpd-footer { min-height: 120px; margin: 0 18px; flex-wrap: wrap; gap: 8px 16px; padding: 22px 0; }
     .ozpd-footer p { order: 3; flex-basis: 100%; }
+}
+
+/* ── 1.3.2 density, contrast and interaction polish ─────────────────────── */
+:root { --sl6: #52645b; --sl5: #66766e; --sl4: #7d8b84; }
+.ozpd-nav-bar { height: 62px; }
+.ozpd-cart-link {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #10251b !important;
+    background: #edf7f1;
+    border: 1px solid #d3e7db;
+    border-radius: 10px;
+}
+.ozpd-cart-link svg { width: 20px; height: 20px; stroke-width: 1.8; }
+.ozpd-cart-count { min-width: 18px; height: 18px; padding: 0 4px; display: grid; place-items: center; top: -7px; right: -7px; background: #087a49; color: #fff; border: 2px solid #fff; }
+.ozpd-hero { min-height: 0; padding-top: 44px; padding-bottom: 34px; align-items: center; }
+.ozpd-hero-h1 { font-size: clamp(40px,4.25vw,58px); }
+.ozpd-hero-sub { font-size: 16px; line-height: 1.55; }
+.ozpd-products-label { padding-top: 22px; padding-bottom: 14px; }
+.ozpd-products-section { padding-bottom: 38px; }
+.ozpd-products-section .wc-block-components-product-image { min-height: 160px; }
+.ozpd-products-section .wc-block-components-product-button__button,
+.ozpd-products-section .wp-block-button__link {
+    min-width: 132px;
+    min-height: 42px;
+    padding: 0 17px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+}
+.ozpd-products-section .wc-block-components-product-button__button.is-loading { opacity: .75; cursor: wait; }
+.ozpd-cta-section { padding-bottom: 38px; }
+.ozpd-promo { min-height: 150px; padding: 30px 38px; }
+.ozpd-footer { min-height: 70px; }
+
+.ozpd-checkout-intro {
+    margin: 0 0 14px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: #eaf7ef;
+    border: 1px solid #cce7d7;
+    border-radius: 14px;
+}
+.ozpd-checkout-intro .ozpd-eyebrow { margin-bottom: 7px; }
+.ozpd-checkout-intro h1 { margin: 0; color: #10251b !important; font-size: 22px; letter-spacing: -.025em; }
+.ozpd-checkout-intro > p { max-width: 560px; margin: 0; color: #40564b !important; font-size: 13px; line-height: 1.55; }
+form.woocommerce-checkout { gap: 18px !important; }
+form.woocommerce-checkout #customer_details .woocommerce-billing-fields,
+form.woocommerce-checkout #order_review,
+#order_review .shop_table,
+#payment { color: #10251b !important; }
+form.woocommerce-checkout .form-row label,
+#payment .wc_payment_methods label { color: #10251b !important; }
+form.woocommerce-checkout .form-row .description,
+form.woocommerce-checkout .woocommerce-input-wrapper .description,
+#payment .payment_box p,
+#payment .payment_box span,
+.woocommerce-privacy-policy-text,
+.woocommerce-terms-and-conditions-checkbox-text { color: #52645b !important; }
+#payment .payment_box { background: #eef7f1 !important; border-color: #cfe4d8 !important; color: #10251b !important; }
+#payment .payment_box::before { border-bottom-color: #eef7f1 !important; }
+#payment .payment_box input { background: #fff !important; color: #10251b !important; border-color: #9fbaaa !important; }
+#payment #place_order {
+    min-height: 48px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1.1 !important;
+    color: #fff !important;
+}
+#order_review .shop_table tfoot tr td { color: #52645b !important; }
+#order_review .shop_table tfoot tr.order-total td { color: #10251b !important; }
+
+@media (max-width: 760px) {
+    .ozpd-sandbox-pill { display: none; }
+    .ozpd-cart-link { width: 38px; height: 38px; }
+    .ozpd-hero { padding-top: 34px; padding-bottom: 28px; }
+    .ozpd-hero-h1 { font-size: 36px; }
+    .ozpd-demo-note { margin-top: 20px; }
+    .ozpd-products-section .wc-block-components-product-image { min-height: 145px; }
+    .ozpd-checkout-intro { display: block; padding: 16px; }
+    .ozpd-checkout-intro > p { margin-top: 9px; }
 }
 @media (max-width: 430px) {
     .ozpd-wordmark { display: none; }
