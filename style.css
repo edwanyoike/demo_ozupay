@@ -2,7 +2,7 @@
 Theme Name:  OzuPay Demo
 Template:    twentytwentyfive
 Description: Minimal sandbox demo theme for demo.ozupay.com — products, checkout, buy-the-plugin CTAs.
-Version:     1.3.4
+Version:     1.3.5
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
@@ -333,6 +333,48 @@ form.woocommerce-checkout .woocommerce-input-wrapper .description,
 
 body.woocommerce-checkout .woocommerce-notices-wrapper,
 body.woocommerce-checkout .wc-block-components-notice-banner.is-success { display: none !important; }
+
+/* ── 1.3.5 compact first-screen layout ───────────────────────────────────── */
+@media (min-width: 761px) {
+    .ozpd-nav-bar { height: 58px; }
+    .ozpd-hero {
+        max-width: 1160px;
+        padding: 26px 0 22px;
+        display: grid;
+        grid-template-columns: minmax(0,1fr) auto;
+        gap: 36px;
+    }
+    .ozpd-hero-h1 { margin-bottom: 10px; font-size: clamp(36px,3.35vw,48px); line-height: 1.02; }
+    .ozpd-hero-sub { max-width: 720px; font-size: 14px; line-height: 1.45; }
+    .ozpd-hero .ozpd-eyebrow { margin-bottom: 9px; }
+    .ozpd-demo-note { margin: 0; padding: 10px 13px; }
+    .ozpd-products-label {
+        max-width: 1160px;
+        padding: 16px 0 11px;
+        align-items: center;
+    }
+    .ozpd-products-label h2 { font-size: 22px; }
+    .ozpd-products-label .ozpd-eyebrow { margin-bottom: 6px; }
+    .ozpd-products-hint { max-width: none; font-size: 11px; }
+    .ozpd-products-section { max-width: 1160px; padding-bottom: 24px; }
+    .ozpd-products-section .wc-block-components-product-image { min-height: 118px; height: 118px; }
+    .ozpd-products-section .wc-block-components-product-image img { height: 118px !important; object-fit: cover !important; }
+    .ozpd-products-section .wp-block-group { padding: 10px 14px 12px !important; }
+    .ozpd-products-section .wp-block-post-title { margin-bottom: 3px !important; }
+    .ozpd-price-row { min-height: 42px; }
+    .ozpd-cta-section { max-width: 1160px; padding-bottom: 24px; }
+    .ozpd-promo { min-height: 112px; padding: 22px 30px; }
+    .ozpd-promo-text h2 { margin-bottom: 5px; font-size: 23px; }
+    .ozpd-promo .ozpd-eyebrow { margin-bottom: 7px; }
+    .ozpd-footer { max-width: 1160px; min-height: 58px; }
+}
+
+@media (min-width: 761px) and (max-width: 1208px) {
+    .ozpd-hero, .ozpd-products-label, .ozpd-products-section, .ozpd-cta-section, .ozpd-footer {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+}
 @media (max-width: 430px) {
     .ozpd-wordmark { display: none; }
     .ozpd-sandbox-pill { margin-left: auto; }
