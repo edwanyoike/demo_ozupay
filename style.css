@@ -62,7 +62,7 @@ body { background: var(--bg); color: var(--dark); }
     box-shadow: none;
     backdrop-filter: blur(14px);
 }
-.ozpd-nav-bar { height: 72px; max-width: 1180px; padding: 0 30px; }
+.ozpd-nav-bar { height: 72px; max-width: 1180px; padding: 0 30px; background: transparent; }
 .ozpd-logo-icon { width: 30px; height: 30px; border-radius: 9px; background: var(--g); }
 .ozpd-wordmark { color: var(--dark); font-size: 18px; letter-spacing: -.025em; }
 .ozpd-nav-right { gap: 24px; }
@@ -1930,8 +1930,8 @@ body { background: #f6f8f5; color: #10251b; }
 .ozpd-products-label { max-width: 1120px; margin: 0 auto; padding: 30px 0 20px; display: flex; align-items: end; justify-content: space-between; border-top: 1px solid #dfe7e2; }
 .ozpd-products-label h2 { margin: 0; color: #10251b; font-size: 28px; }
 .ozpd-products-section { max-width: 1120px; margin: 0 auto; padding: 0 0 76px; }
-.ozpd-products-section .wc-block-product-template { gap: 20px !important; justify-content: flex-start; }
-.ozpd-products-section .wc-block-product { width: calc(50% - 10px) !important; background: #fff; border-color: #dfe7e2; border-radius: 18px; box-shadow: 0 12px 38px rgba(28,61,44,.06); }
+.ozpd-products-section .wc-block-product-template { gap: 20px !important; grid-template-columns: repeat(2,minmax(0,1fr)) !important; justify-content: stretch; }
+.ozpd-products-section .wc-block-product { width: auto !important; max-width: none !important; background: #fff; border-color: #dfe7e2; border-radius: 18px; box-shadow: 0 12px 38px rgba(28,61,44,.06); }
 .ozpd-products-section .wc-block-components-product-image { min-height: 210px; background-color: #eef7f1 !important; border-color: #dfe7e2; }
 .ozpd-products-section .wp-block-group { background: #fff; }
 .ozpd-products-section .wp-block-post-title a, .ozpd-products-section .wc-block-components-product-price { color: #10251b !important; }
@@ -1940,7 +1940,7 @@ body { background: #f6f8f5; color: #10251b; }
 .ozpd-promo { min-height: 190px; padding: 42px 46px; display: flex; align-items: center; justify-content: space-between; gap: 40px; background: #10251b; border: 0; border-radius: 20px; box-shadow: none; }
 .ozpd-promo-text h2 { color: #fff; }
 .ozpd-promo-text p:not(.ozpd-eyebrow) { color: #a9bdb2; }
-.ozpd-promo-cta { flex: 0 0 auto; width: auto; padding: 15px 20px; background: #fff; color: #10251b; border-radius: 11px; }
+.ozpd-promo-cta { flex: 0 0 auto; width: auto; padding: 15px 20px; background: #fff; color: #10251b !important; border-radius: 11px; }
 .ozpd-footer { min-height: 84px; max-width: 1120px; margin: 0 auto; padding: 0; display: flex; align-items: center; gap: 24px; background: transparent; border-color: #dfe7e2; color: #607068; text-align: left; }
 .ozpd-footer p { flex: 1; margin: 0; }
 .ozpd-footer a { color: #10251b; }
@@ -1954,7 +1954,8 @@ body { background: #f6f8f5; color: #10251b; }
     .ozpd-hero-sub { font-size: 15px; }
     .ozpd-products-label { margin: 0 18px; padding: 26px 0 16px; display: block; }
     .ozpd-products-section { margin: 0 14px; padding: 0 0 48px; }
-    .ozpd-products-section .wc-block-product { width: 100% !important; }
+    .ozpd-products-section .wc-block-product-template { grid-template-columns: 1fr !important; }
+    .ozpd-products-section .wc-block-product { width: auto !important; }
     .ozpd-cta-section { margin: 0 14px; padding: 0 0 48px; }
     .ozpd-promo { min-height: 0; padding: 30px 26px; display: block; }
     .ozpd-promo-cta { display: inline-flex; margin-top: 24px; }
