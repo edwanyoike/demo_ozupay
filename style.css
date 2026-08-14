@@ -1918,7 +1918,7 @@ body.woocommerce-checkout .ozpd-footer {
 /* Cascade lock: this compact layer deliberately follows the legacy theme. */
 body { background: #f6f8f5; color: #10251b; }
 .ozpd-sticky-top { background: rgba(255,255,255,.94); border-color: #dfe7e2; box-shadow: none; }
-.ozpd-nav-bar { height: 72px; max-width: 1180px; padding: 0 30px; }
+.ozpd-nav-bar { height: 72px; max-width: 1180px; padding: 0 30px; background: transparent; }
 .ozpd-wordmark, .ozpd-cart-link { color: #10251b; }
 .ozpd-logo-icon { background: #12a866; }
 .ozpd-nav-link { color: #526159; }
