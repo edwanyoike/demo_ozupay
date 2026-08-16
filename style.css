@@ -2,7 +2,7 @@
 Theme Name:  OzuPay Demo
 Template:    twentytwentyfive
 Description: Minimal sandbox demo theme for demo.ozupay.com — products, checkout, buy-the-plugin CTAs.
-Version:     1.3.10
+Version:     1.3.11
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
@@ -409,6 +409,16 @@ body.woocommerce-checkout .wc-block-components-notice-banner.is-success { displa
     .ozpd-demo-note div > span { margin-top: 2px; line-height: 1.35 !important; }
     .ozpd-products-label h2 { font-size: 25px; line-height: 1.15; }
     .ozpd-products-hint { max-width: 290px; font-size: 10px; line-height: 1.3 !important; }
+    .ozpd-get-btn {
+        height: 40px !important;
+        min-height: 40px !important;
+        padding: 0 16px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        line-height: 1 !important;
+        white-space: nowrap;
+    }
 }
 
 @media (min-width: 761px) and (max-width: 1208px) {
@@ -2304,4 +2314,5 @@ body { background: #f6f8f5; color: #10251b; }
     .ozpd-demo-note div > span { margin-top: 2px; line-height: 1.35 !important; }
     .ozpd-products-label h2 { font-size: 25px; line-height: 1.15; }
     .ozpd-products-hint { max-width: 290px; font-size: 10px; line-height: 1.3 !important; }
+    .ozpd-get-btn { height: 40px !important; min-height: 40px !important; padding: 0 16px !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; line-height: 1 !important; white-space: nowrap; }
 }
